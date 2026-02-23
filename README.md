@@ -5,7 +5,7 @@ Reuse style and data file from https://github.com/pavelfomin/resume.
 
 ### Local setup
 * `git remote add resume git@github.com:pavelfomin/resume.git`
-* `git pull resume`
+* `git pull resume master`
 * (optional) `npm ci` # wipes node_modules so `npm install` may then modify the lockfile
 * `npm install`
 * `npm run dev`
