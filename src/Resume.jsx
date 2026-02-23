@@ -220,18 +220,21 @@ function AssignmentBlock({ assignment, showDetails: allowDetails = true }) {
           <span className="desc-text" dangerouslySetInnerHTML={{ __html: assignment.descriptionHtml }} />
         )}
         {allowDetails && assignment.details && assignment.details.length > 0 ? (
-          <a
-            href="#"
-            className={`action-show ${detailsId}`}
-            data-element-id={detailsId}
-            onClick={(e) => {
-              e.preventDefault();
-              setDetailsVisible(true);
-            }}
-            style={{ display: detailsVisible ? "none" : "inline" }}
-          >
-            More details
-          </a>
+          <>
+            {'\u00A0'}
+            <a
+              href="#"
+              className={`action-show ${detailsId}`}
+              data-element-id={detailsId}
+              onClick={(e) => {
+                e.preventDefault();
+                setDetailsVisible(true);
+              }}
+              style={{ display: detailsVisible ? "none" : "inline" }}
+            >
+              More details
+            </a>
+          </>
         ) : null}
       </div>
 
